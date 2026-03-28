@@ -73,6 +73,50 @@ export default function Home() {
             </li>
           ))}
         </ul>
+
+        {/* Mobile-only animated scales emblem */}
+        <div className="md:hidden hero-float opacity-70">
+          <svg
+            viewBox="0 0 80 56"
+            width="52"
+            height="36"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {/* Pillar */}
+            <line x1="40" y1="6" x2="40" y2="44" stroke="#B8A88A" strokeWidth="0.9" opacity="0.5" />
+            {/* Pillar top finial */}
+            <circle cx="40" cy="6" r="2.2" stroke="#B8A88A" strokeWidth="0.8" opacity="0.6" />
+            <circle cx="40" cy="6" r="0.9" fill="#B8A88A" opacity="0.6" />
+            {/* Pillar base */}
+            <line x1="32" y1="44" x2="48" y2="44" stroke="#B8A88A" strokeWidth="0.9" opacity="0.55" />
+            <line x1="29" y1="47" x2="51" y2="47" stroke="#B8A88A" strokeWidth="0.7" opacity="0.4" />
+
+            {/* Scales group — reuses same tilt animation */}
+            <g className="scales-tilt">
+              {/* Beam */}
+              <line x1="8" y1="16" x2="72" y2="16" stroke="#B8A88A" strokeWidth="1.2" opacity="0.85" />
+              {/* Center pivot */}
+              <circle cx="40" cy="16" r="2.5" stroke="#B8A88A" strokeWidth="0.8" opacity="0.8" />
+              <circle cx="40" cy="16" r="1"   fill="#B8A88A" opacity="0.8" />
+              {/* Beam tip dots */}
+              <circle cx="8"  cy="16" r="1.8" stroke="#B8A88A" strokeWidth="0.6" opacity="0.55" />
+              <circle cx="72" cy="16" r="1.8" stroke="#B8A88A" strokeWidth="0.6" opacity="0.55" />
+
+              {/* Left chain */}
+              <line x1="8" y1="18" x2="8" y2="30" stroke="#B8A88A" strokeWidth="0.7" strokeDasharray="3 2" opacity="0.5" />
+              {/* Left pan */}
+              <path d="M1 30 Q8 36 15 30" stroke="#B8A88A" strokeWidth="1.2" opacity="0.8" />
+              <line x1="1" y1="30" x2="15" y2="30" stroke="#B8A88A" strokeWidth="0.5" opacity="0.35" />
+
+              {/* Right chain */}
+              <line x1="72" y1="18" x2="72" y2="30" stroke="#B8A88A" strokeWidth="0.7" strokeDasharray="3 2" opacity="0.5" />
+              {/* Right pan */}
+              <path d="M65 30 Q72 36 79 30" stroke="#B8A88A" strokeWidth="1.2" opacity="0.8" />
+              <line x1="65" y1="30" x2="79" y2="30" stroke="#B8A88A" strokeWidth="0.5" opacity="0.35" />
+            </g>
+          </svg>
+        </div>
       </nav>
 
       {/* ─── HERO ─── */}
