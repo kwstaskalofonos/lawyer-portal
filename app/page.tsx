@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 const practiceAreas = [
-  "Civil Litigation",
-  "Corporate Law",
-  "Real Estate",
-  "Commercial Disputes",
-  "Regulatory Compliance",
+  "Αστικές Διαφορές",
+  "Εταιρικό Δίκαιο",
+  "Δίκαιο Ακινήτων",
+  "Εμπορικές Διαφορές",
+  "Κανονιστική Σμμόρφωση",
 ];
 
 const stats = [
@@ -59,7 +59,7 @@ export default function Home() {
           href="#"
           className="font-serif text-[1.35rem] tracking-[0.08em] text-off-white no-underline"
         >
-          Konstantinou<span className="text-gold">.</span>
+          Μπακόπουλος<span className="text-gold">.</span>
         </a>
         <ul className="hidden md:flex gap-11 list-none m-0 p-0">
           {["About", "Practice", "Philosophy", "Contact"].map((item) => (
@@ -79,28 +79,28 @@ export default function Home() {
       <section className="min-h-screen grid md:grid-cols-2">
         <div className="flex flex-col justify-center px-7 md:px-14 pt-40 md:pt-32 pb-16 relative z-[2]">
           <p className="animate-fade-up-1 text-[0.68rem] font-medium tracking-[0.3em] uppercase text-gold mb-8">
-            Attorney at Law · Athens, Greece
+            Δικηγορος · Αθηνα, Ελλαδα
           </p>
           <h1
             className="animate-fade-up-2 font-serif font-light text-warm-white leading-[1.08] mb-8"
             style={{ fontSize: "clamp(3rem, 5.5vw, 5.5rem)" }}
           >
-            Counsel
+            Νομική συμβουλή
             <br />
-            built on
+            θεμελιωμένη σε
             <br />
-            <em className="italic text-gold">conviction.</em>
+            <em className="italic text-gold">πεποίθηση.</em>
           </h1>
           <div className="animate-expand-divider h-px bg-gold mb-8" />
           <p className="animate-fade-up-3 text-[0.95rem] text-silver max-w-[420px] leading-[1.85] mb-12">
-            Providing strategic legal counsel in civil, commercial, and
-            corporate matters with unwavering precision and discretion.
+            Παροχή στρατηγικής νομικής συμβουλής σε αστικές, εμπορικές, και
+            εταιρικές υποθέσεις με ακρίβεια και διακριτικότητα.
           </p>
           <a
             href="#contact"
             className="animate-fade-up-4 group inline-flex items-center gap-4 text-[0.72rem] font-medium tracking-[0.22em] uppercase text-off-white px-[2.4rem] py-[1.1rem] border border-ash hover:border-gold hover:text-gold hover:[background:rgba(184,168,138,0.15)] transition-all duration-300 w-fit"
           >
-            Schedule a Consultation
+            Κλείστε Ραντεβού
             <svg
               width="14"
               height="14"
