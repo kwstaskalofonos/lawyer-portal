@@ -61,30 +61,84 @@ body {
   inset: 0;
   background: linear-gradient(to right, #0a0a0a 0%, transparent 40%),
     linear-gradient(to top, #0a0a0a 0%, transparent 30%);
-  z-index: 1;
+  z-index: 3;
 }
 .hero-image-inner {
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-    135deg,
-    #141414 0%,
-    #1c1c1e 40%,
-    #2a2a2c 100%
-  );
+  background: linear-gradient(135deg, #141414 0%, #1c1c1e 40%, #2a2a2c 100%);
   position: relative;
 }
 .hero-image-inner::after {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 0;
   background: radial-gradient(
-      ellipse at 70% 40%,
-      rgba(184, 168, 138, 0.06) 0%,
-      transparent 60%
-    ),
-    url("data:image/svg+xml,%3Csvg viewBox='0 0 400 600' xmlns='http://www.w3.org/2000/svg'%3E%3Cline x1='200' y1='80' x2='200' y2='520' stroke='%23B8A88A' stroke-width='0.3' opacity='0.15'/%3E%3Ccircle cx='200' cy='300' r='120' stroke='%23B8A88A' stroke-width='0.3' fill='none' opacity='0.08'/%3E%3Ccircle cx='200' cy='300' r='80' stroke='%23B8A88A' stroke-width='0.3' fill='none' opacity='0.05'/%3E%3C/svg%3E")
-      center / cover;
+    ellipse at 55% 45%,
+    rgba(184, 168, 138, 0.04) 0%,
+    transparent 65%
+  );
+}
+
+/* ── Pulsing gold glow behind composition ── */
+.hero-glow {
+  width: 340px;
+  height: 340px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(184, 168, 138, 0.1) 0%,
+    transparent 70%
+  );
+  z-index: 1;
+  animation: glowPulse 7s ease-in-out infinite;
+}
+
+/* ── Floating wrapper ── */
+.hero-float {
+  animation: heroFloat 10s ease-in-out infinite;
+}
+
+/* ── Scales animated group ── */
+.scales-tilt {
+  transform-box: fill-box;
+  transform-origin: 50% 2%;   /* pivot near the beam */
+  animation: scalesTilt 11s ease-in-out infinite;
+}
+
+/* ── Slowly rotating rings ── */
+.hero-ring-outer {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ringRotate 90s linear infinite;
+}
+.hero-ring-inner {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: ringRotate 65s linear infinite reverse;
+}
+
+/* ── Keyframes ── */
+@keyframes glowPulse {
+  0%, 100% { opacity: 0.6; transform: scale(0.92); }
+  50%       { opacity: 1;   transform: scale(1.08); }
+}
+
+@keyframes heroFloat {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+
+@keyframes scalesTilt {
+  0%   { transform: rotate(-2.5deg); }
+  50%  { transform: rotate(2.5deg); }
+  100% { transform: rotate(-2.5deg); }
+}
+
+@keyframes ringRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 /* ─── PHILOSOPHY decorative quote ─── */

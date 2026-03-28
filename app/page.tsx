@@ -118,7 +118,103 @@ export default function Home() {
 
         {/* Decorative image panel */}
         <div className="hidden md:block hero-image-panel">
-          <div className="hero-image-inner" />
+          <div className="hero-image-inner relative flex items-center justify-center">
+            {/* Pulsing glow */}
+            <div className="hero-glow absolute pointer-events-none" />
+
+            {/* Floating SVG composition */}
+            <div className="hero-float absolute inset-0 z-[2] flex items-center justify-center pointer-events-none">
+              <svg
+                viewBox="0 0 500 700"
+                className="w-[68%] max-w-[380px]"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                {/* Outer decorative frame */}
+                <rect x="30" y="40" width="440" height="620" stroke="#B8A88A" strokeWidth="0.4" opacity="0.18" />
+                {/* Corner bracket accents */}
+                <path d="M30 90 L30 40 L80 40"   stroke="#B8A88A" strokeWidth="1"   opacity="0.55" />
+                <path d="M420 40 L470 40 L470 90" stroke="#B8A88A" strokeWidth="1"   opacity="0.55" />
+                <path d="M30 610 L30 660 L80 660"  stroke="#B8A88A" strokeWidth="1"   opacity="0.55" />
+                <path d="M420 660 L470 660 L470 610" stroke="#B8A88A" strokeWidth="1" opacity="0.55" />
+
+                {/* Background concentric rings */}
+                <circle cx="250" cy="330" r="205" stroke="#B8A88A" strokeWidth="0.4" opacity="0.06" className="hero-ring-outer" />
+                <circle cx="250" cy="330" r="155" stroke="#B8A88A" strokeWidth="0.4" opacity="0.09" className="hero-ring-inner" />
+                <circle cx="250" cy="330" r="105" stroke="#B8A88A" strokeWidth="0.35" opacity="0.06" />
+
+                {/* Horizontal decorative rules */}
+                <line x1="60" y1="120" x2="440" y2="120" stroke="#B8A88A" strokeWidth="0.5" opacity="0.25" />
+                <line x1="60" y1="560" x2="440" y2="560" stroke="#B8A88A" strokeWidth="0.5" opacity="0.25" />
+                {/* Diamond accents on rules */}
+                <rect x="246" y="116" width="8" height="8" transform="rotate(45 250 120)" fill="#B8A88A" opacity="0.4" />
+                <rect x="246" y="556" width="8" height="8" transform="rotate(45 250 560)" fill="#B8A88A" opacity="0.4" />
+                <rect x="56"  y="116" width="6" height="6" transform="rotate(45 60 120)"  fill="#B8A88A" opacity="0.2" />
+                <rect x="436" y="116" width="6" height="6" transform="rotate(45 440 120)" fill="#B8A88A" opacity="0.2" />
+                <rect x="56"  y="556" width="6" height="6" transform="rotate(45 60 560)"  fill="#B8A88A" opacity="0.2" />
+                <rect x="436" y="556" width="6" height="6" transform="rotate(45 440 560)" fill="#B8A88A" opacity="0.2" />
+
+                {/* Central support pillar */}
+                <line x1="250" y1="210" x2="250" y2="520" stroke="#B8A88A" strokeWidth="0.8" opacity="0.45" />
+                {/* Pillar top finial */}
+                <circle cx="250" cy="210" r="7"   stroke="#B8A88A" strokeWidth="0.9" opacity="0.6" />
+                <circle cx="250" cy="210" r="2.5" fill="#B8A88A" opacity="0.6" />
+                {/* Pillar base steps */}
+                <line x1="220" y1="520" x2="280" y2="520" stroke="#B8A88A" strokeWidth="1"   opacity="0.6" />
+                <line x1="212" y1="528" x2="288" y2="528" stroke="#B8A88A" strokeWidth="1"   opacity="0.6" />
+                <line x1="204" y1="536" x2="296" y2="536" stroke="#B8A88A" strokeWidth="0.5" opacity="0.3" />
+
+                {/* ── ANIMATED SCALES GROUP ── */}
+                <g className="scales-tilt">
+                  {/* Beam */}
+                  <line x1="95" y1="240" x2="405" y2="240" stroke="#B8A88A" strokeWidth="1.5" opacity="0.8" />
+                  {/* Center pivot ornament */}
+                  <circle cx="250" cy="240" r="5.5" stroke="#B8A88A" strokeWidth="1"   opacity="0.8" />
+                  <circle cx="250" cy="240" r="2"   fill="#B8A88A" opacity="0.8" />
+                  {/* Beam tip ornaments */}
+                  <circle cx="95"  cy="240" r="3.5" stroke="#B8A88A" strokeWidth="0.8" opacity="0.6" />
+                  <circle cx="405" cy="240" r="3.5" stroke="#B8A88A" strokeWidth="0.8" opacity="0.6" />
+
+                  {/* Left chain (dashed = vintage engraving) */}
+                  <line x1="95" y1="244" x2="95" y2="355" stroke="#B8A88A" strokeWidth="0.9" strokeDasharray="4 3" opacity="0.5" />
+                  {/* Left pan */}
+                  <path d="M57 358 Q95 378 133 358" stroke="#B8A88A" strokeWidth="1.5" opacity="0.8" />
+                  <line x1="57" y1="358" x2="133" y2="358" stroke="#B8A88A" strokeWidth="0.7" opacity="0.4" />
+                  {/* Pan dots (weight indicators) */}
+                  <circle cx="83"  cy="365" r="1.2" fill="#B8A88A" opacity="0.3" />
+                  <circle cx="95"  cy="370" r="1.2" fill="#B8A88A" opacity="0.3" />
+                  <circle cx="107" cy="365" r="1.2" fill="#B8A88A" opacity="0.3" />
+
+                  {/* Right chain */}
+                  <line x1="405" y1="244" x2="405" y2="355" stroke="#B8A88A" strokeWidth="0.9" strokeDasharray="4 3" opacity="0.5" />
+                  {/* Right pan */}
+                  <path d="M367 358 Q405 378 443 358" stroke="#B8A88A" strokeWidth="1.5" opacity="0.8" />
+                  <line x1="367" y1="358" x2="443" y2="358" stroke="#B8A88A" strokeWidth="0.7" opacity="0.4" />
+                  <circle cx="393" cy="365" r="1.2" fill="#B8A88A" opacity="0.3" />
+                  <circle cx="405" cy="370" r="1.2" fill="#B8A88A" opacity="0.3" />
+                  <circle cx="417" cy="365" r="1.2" fill="#B8A88A" opacity="0.3" />
+                </g>
+
+                {/* Monogram flanked by short rules */}
+                <line x1="80"  y1="455" x2="190" y2="455" stroke="#B8A88A" strokeWidth="0.5" opacity="0.2" />
+                <line x1="310" y1="455" x2="420" y2="455" stroke="#B8A88A" strokeWidth="0.5" opacity="0.2" />
+                <text x="250" y="472" textAnchor="middle" fontFamily="Georgia, serif" fontSize="22" fill="#B8A88A" opacity="0.45" letterSpacing="10">ΔΚ</text>
+
+                {/* Tagline */}
+                <text x="250" y="503" textAnchor="middle" fontFamily="Arial, sans-serif" fontSize="7.5" fill="#B8A88A" opacity="0.28" letterSpacing="5">ΔΙΚΗΓΟΡΟΣ · ΑΘΗΝΑ</text>
+
+                {/* Flank accent dots */}
+                <circle cx="250" cy="158" r="2.5" fill="#B8A88A" opacity="0.22" />
+                <circle cx="250" cy="602" r="2.5" fill="#B8A88A" opacity="0.22" />
+                <circle cx="60"  cy="330" r="1.5" fill="#B8A88A" opacity="0.18" />
+                <circle cx="440" cy="330" r="1.5" fill="#B8A88A" opacity="0.18" />
+                <circle cx="60"  cy="308" r="1"   fill="#B8A88A" opacity="0.12" />
+                <circle cx="440" cy="308" r="1"   fill="#B8A88A" opacity="0.12" />
+                <circle cx="60"  cy="352" r="1"   fill="#B8A88A" opacity="0.12" />
+                <circle cx="440" cy="352" r="1"   fill="#B8A88A" opacity="0.12" />
+              </svg>
+            </div>
+          </div>
         </div>
       </section>
 
