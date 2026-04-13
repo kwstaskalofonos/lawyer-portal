@@ -46,6 +46,7 @@ body {
   background: #b8a88a;
   transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
+
 .nav-link:hover::after {
   width: 100%;
 }
@@ -232,3 +233,719 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* ═══════════════════════════════════════════════
+   LANDPAGE 2
+═══════════════════════════════════════════════ */
+
+/* ─── HERO ENTRY ANIMATIONS ─── */
+.lp2-fade-1 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.25s forwards;
+}
+.lp2-fade-2 {
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.45s forwards;
+}
+.lp2-fade-3 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.65s forwards;
+}
+.lp2-fade-4 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.85s forwards;
+}
+
+/* ─── HERO DIVIDER ─── */
+.lp2-divider {
+  width: 0;
+  opacity: 0;
+  animation: lp2DividerExpand 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.55s forwards;
+}
+@keyframes lp2DividerExpand {
+  to {
+    width: 72px;
+    opacity: 1;
+  }
+}
+
+/* ─── SCROLL LINE INDICATOR ─── */
+.lp2-scroll-line {
+  animation: lp2ScrollGrow 1.2s ease 1.6s both;
+}
+@keyframes lp2ScrollGrow {
+  from { height: 0; opacity: 0; }
+  to   { height: 48px; opacity: 1; }
+}
+
+/* ─── HERO SHIMMER SWEEP ─── */
+.lp2-hero-shimmer {
+  background: linear-gradient(
+    108deg,
+    transparent 38%,
+    rgba(255, 255, 255, 0.022) 50%,
+    transparent 62%
+  );
+  background-size: 250% 100%;
+  animation: lp2Shimmer 9s ease-in-out infinite;
+}
+@keyframes lp2Shimmer {
+  0%   { background-position: 200% center; }
+  100% { background-position: -200% center; }
+}
+
+/* ─── GRAIN / NOISE TEXTURE OVERLAY ─── */
+.lp2-grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  opacity: 0.04;
+}
+
+/* ─── LAWYER CARD HOVER ─── */
+.lp2-lawyer-card {
+  transition: background 0.4s ease;
+}
+
+/* ─── QUOTE SECTION BLURRED BG ─── */
+.lp2-quote-img {
+  filter: grayscale(100%) blur(6px) brightness(0.18);
+  transform: scale(1.12);
+}
+
+/* ─── FEATURE BAND ─── */
+.lp2-feature-img {
+  filter: grayscale(100%) brightness(0.25);
+}
+
+/* ─── ANIMATED STAT ENTRIES ─── */
+.lp2-stat-1 { opacity: 0; animation: fadeUp 0.6s ease 0.1s forwards; }
+.lp2-stat-2 { opacity: 0; animation: fadeUp 0.6s ease 0.25s forwards; }
+.lp2-stat-3 { opacity: 0; animation: fadeUp 0.6s ease 0.4s forwards; }
+.lp2-stat-4 { opacity: 0; animation: fadeUp 0.6s ease 0.55s forwards; }
+
+/* ═══════════════════════════════════════════════
+   LANDPAGE 4 — Slate & Gold
+═══════════════════════════════════════════════ */
+
+/* ─── NAV LINK gold underline ─── */
+.lp4-nav-link {
+  position: relative;
+}
+.lp4-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #D4A843;
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.lp4-nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── HERO ENTRY ANIMATIONS ─── */
+.lp4-fade-1 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.25s forwards;
+}
+.lp4-fade-2 {
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.45s forwards;
+}
+.lp4-fade-3 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.65s forwards;
+}
+.lp4-fade-4 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.85s forwards;
+}
+
+/* ─── GOLD DIVIDER EXPAND ─── */
+.lp4-divider {
+  width: 0;
+  opacity: 0;
+  animation: lp4DividerExpand 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.55s forwards;
+}
+@keyframes lp4DividerExpand {
+  to { width: 72px; opacity: 1; }
+}
+
+/* ─── SCROLL LINE ─── */
+.lp4-scroll-line {
+  animation: lp4ScrollGrow 1.2s ease 1.6s both;
+}
+@keyframes lp4ScrollGrow {
+  from { height: 0; opacity: 0; }
+  to   { height: 48px; opacity: 1; }
+}
+
+/* ─── HERO RADIAL GLOW (gold on navy) ─── */
+.lp4-hero-glow {
+  background: radial-gradient(
+    ellipse at 50% 42%,
+    rgba(212, 168, 67, 0.09) 0%,
+    rgba(212, 168, 67, 0.03) 45%,
+    transparent 72%
+  );
+}
+
+/* ─── SUBTLE ARCHITECTURAL GRID ─── */
+.lp4-grid {
+  background-image:
+    linear-gradient(rgba(30, 48, 72, 0.35) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 48, 72, 0.35) 1px, transparent 1px);
+  background-size: 80px 80px;
+  -webkit-mask-image: radial-gradient(ellipse at center, black 25%, transparent 78%);
+  mask-image: radial-gradient(ellipse at center, black 25%, transparent 78%);
+}
+
+/* ─── EMBLEM SLOW SPIN ─── */
+.lp4-emblem-spin {
+  animation: lp4EmblemSpin 40s linear infinite;
+}
+@keyframes lp4EmblemSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ─── PHILOSOPHY SECTION GOLD BORDER LINES ─── */
+.lp4-philosophy-lines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(212, 168, 67, 0.35), transparent);
+}
+.lp4-philosophy-lines::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(212, 168, 67, 0.35), transparent);
+}
+
+/* ─── STAT ANIMATIONS ─── */
+.lp4-stat-1 { opacity: 0; animation: fadeUp 0.6s ease 0.1s forwards; }
+.lp4-stat-2 { opacity: 0; animation: fadeUp 0.6s ease 0.25s forwards; }
+.lp4-stat-3 { opacity: 0; animation: fadeUp 0.6s ease 0.4s forwards; }
+.lp4-stat-4 { opacity: 0; animation: fadeUp 0.6s ease 0.55s forwards; }
+
+/* ═══════════════════════════════════════════════
+   LANDPAGE 5 — Deep Teal & Ivory
+═══════════════════════════════════════════════ */
+
+/* ─── NAV LINK teal underline ─── */
+.lp5-nav-link {
+  position: relative;
+}
+.lp5-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #1DB89A;
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.lp5-nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── HERO ENTRY ANIMATIONS ─── */
+.lp5-fade-1 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.25s forwards;
+}
+.lp5-fade-2 {
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.45s forwards;
+}
+.lp5-fade-3 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.65s forwards;
+}
+.lp5-fade-4 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.85s forwards;
+}
+
+/* ─── TEAL DIVIDER EXPAND ─── */
+.lp5-divider {
+  width: 0;
+  opacity: 0;
+  animation: lp5DividerExpand 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.55s forwards;
+}
+@keyframes lp5DividerExpand {
+  to { width: 72px; opacity: 1; }
+}
+
+/* ─── SCROLL LINE ─── */
+.lp5-scroll-line {
+  animation: lp5ScrollGrow 1.2s ease 1.6s both;
+}
+@keyframes lp5ScrollGrow {
+  from { height: 0; opacity: 0; }
+  to   { height: 48px; opacity: 1; }
+}
+
+/* ─── HERO DUAL RADIAL GLOW (teal on deep teal-navy) ─── */
+.lp5-hero-glow-primary {
+  background: radial-gradient(
+    ellipse at 50% 38%,
+    rgba(29, 184, 154, 0.12) 0%,
+    rgba(29, 184, 154, 0.04) 45%,
+    transparent 70%
+  );
+}
+.lp5-hero-glow-secondary {
+  background: radial-gradient(
+    ellipse at 30% 70%,
+    rgba(94, 207, 183, 0.05) 0%,
+    transparent 55%
+  );
+}
+
+/* ─── CONCENTRIC ARCS — slow counter-rotate ─── */
+.lp5-arcs {
+  animation: lp5ArcsRotate 120s linear infinite;
+  transform-origin: center;
+}
+@keyframes lp5ArcsRotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ─── PHILOSOPHY WAVE BG — gentle drift ─── */
+.lp5-wave-bg {
+  animation: lp5WaveDrift 18s ease-in-out infinite;
+}
+@keyframes lp5WaveDrift {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(-3%); }
+}
+
+/* ─── PHILOSOPHY TEAL BORDER LINES ─── */
+.lp5-philosophy-lines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(29, 184, 154, 0.35), transparent);
+}
+.lp5-philosophy-lines::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(29, 184, 154, 0.35), transparent);
+}
+
+/* ─── SCROLL REVEAL ─── */
+.lp5-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.lp5-reveal.lp5-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── STAT ANIMATIONS ─── */
+.lp5-stat-1 { opacity: 0; animation: fadeUp 0.6s ease 0.1s forwards; }
+.lp5-stat-2 { opacity: 0; animation: fadeUp 0.6s ease 0.25s forwards; }
+.lp5-stat-3 { opacity: 0; animation: fadeUp 0.6s ease 0.4s forwards; }
+.lp5-stat-4 { opacity: 0; animation: fadeUp 0.6s ease 0.55s forwards; }
+
+/* ═══════════════════════════════════════════════
+   LANDPAGE 6 — Charcoal & Burgundy
+═══════════════════════════════════════════════ */
+
+/* ─── NAV LINK crimson underline ─── */
+.lp6-nav-link {
+  position: relative;
+}
+.lp6-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #C0392B;
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.lp6-nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── HERO ENTRY ANIMATIONS ─── */
+.lp6-fade-1 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.25s forwards;
+}
+.lp6-fade-2 {
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.45s forwards;
+}
+.lp6-fade-3 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.65s forwards;
+}
+.lp6-fade-4 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.85s forwards;
+}
+
+/* ─── CRIMSON DIVIDER EXPAND ─── */
+.lp6-divider {
+  width: 0;
+  opacity: 0;
+  animation: lp6DividerExpand 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.55s forwards;
+}
+@keyframes lp6DividerExpand {
+  to { width: 72px; opacity: 1; }
+}
+
+/* ─── SCROLL LINE ─── */
+.lp6-scroll-line {
+  animation: lp6ScrollGrow 1.2s ease 1.6s both;
+}
+@keyframes lp6ScrollGrow {
+  from { height: 0; opacity: 0; }
+  to   { height: 48px; opacity: 1; }
+}
+
+/* ─── HERO RADIAL GLOW (crimson on charcoal) ─── */
+.lp6-hero-glow {
+  background: radial-gradient(
+    ellipse at 50% 42%,
+    rgba(192, 57, 43, 0.1) 0%,
+    rgba(192, 57, 43, 0.03) 45%,
+    transparent 70%
+  );
+}
+
+/* ─── SHIELD EMBLEM — slow pulse ─── */
+.lp6-shield-pulse {
+  animation: lp6ShieldPulse 6s ease-in-out infinite;
+}
+@keyframes lp6ShieldPulse {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50%       { opacity: 1;    transform: scale(1.06); }
+}
+
+/* ─── PHILOSOPHY CRIMSON BORDER LINES ─── */
+.lp6-philosophy-lines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(192, 57, 43, 0.4), transparent);
+}
+.lp6-philosophy-lines::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(192, 57, 43, 0.4), transparent);
+}
+
+/* ─── SCROLL REVEAL ─── */
+.lp6-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.lp6-reveal.lp6-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── STAT ANIMATIONS ─── */
+.lp6-stat-1 { opacity: 0; animation: fadeUp 0.6s ease 0.1s forwards; }
+.lp6-stat-2 { opacity: 0; animation: fadeUp 0.6s ease 0.25s forwards; }
+.lp6-stat-3 { opacity: 0; animation: fadeUp 0.6s ease 0.4s forwards; }
+.lp6-stat-4 { opacity: 0; animation: fadeUp 0.6s ease 0.55s forwards; }
+
+/* ═══════════════════════════════════════════════
+   LANDPAGE 7 — Stone & Electric Blue
+═══════════════════════════════════════════════ */
+
+/* ─── NAV LINK electric-blue underline ─── */
+.lp7-nav-link {
+  position: relative;
+}
+.lp7-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #2F7BFF;
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.lp7-nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── HERO ENTRY ANIMATIONS ─── */
+.lp7-fade-1 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.25s forwards;
+}
+.lp7-fade-2 {
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.45s forwards;
+}
+.lp7-fade-3 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.65s forwards;
+}
+.lp7-fade-4 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.85s forwards;
+}
+
+/* ─── ELECTRIC BLUE DIVIDER EXPAND ─── */
+.lp7-divider {
+  width: 0;
+  opacity: 0;
+  animation: lp7DividerExpand 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.55s forwards;
+}
+@keyframes lp7DividerExpand {
+  to { width: 72px; opacity: 1; }
+}
+
+/* ─── SCROLL LINE ─── */
+.lp7-scroll-line {
+  animation: lp7ScrollGrow 1.2s ease 1.6s both;
+}
+@keyframes lp7ScrollGrow {
+  from { height: 0; opacity: 0; }
+  to   { height: 48px; opacity: 1; }
+}
+
+/* ─── HERO RADIAL GLOW (electric blue on stone) ─── */
+.lp7-hero-glow {
+  background: radial-gradient(
+    ellipse at 50% 42%,
+    rgba(47, 123, 255, 0.11) 0%,
+    rgba(47, 123, 255, 0.04) 45%,
+    transparent 70%
+  );
+}
+
+/* ─── HEX GRID — very slow drift ─── */
+.lp7-hex-grid {
+  animation: lp7HexDrift 30s ease-in-out infinite alternate;
+}
+@keyframes lp7HexDrift {
+  from { transform: translateX(0) translateY(0); }
+  to   { transform: translateX(-20px) translateY(-12px); }
+}
+
+/* ─── HORIZONTAL SCAN-LINE SWEEP ─── */
+.lp7-scan {
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(47, 123, 255, 0.025) 50%,
+    transparent 100%
+  );
+  background-size: 100% 200px;
+  animation: lp7Scan 8s linear infinite;
+}
+@keyframes lp7Scan {
+  from { background-position: 0 -200px; }
+  to   { background-position: 0 100vh; }
+}
+
+/* ─── PHILOSOPHY BLUE BORDER LINES ─── */
+.lp7-philosophy-lines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(47, 123, 255, 0.4), transparent);
+}
+.lp7-philosophy-lines::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(47, 123, 255, 0.4), transparent);
+}
+
+/* ─── SCROLL REVEAL ─── */
+.lp7-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.lp7-reveal.lp7-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── STAT ANIMATIONS ─── */
+.lp7-stat-1 { opacity: 0; animation: fadeUp 0.6s ease 0.1s forwards; }
+.lp7-stat-2 { opacity: 0; animation: fadeUp 0.6s ease 0.25s forwards; }
+.lp7-stat-3 { opacity: 0; animation: fadeUp 0.6s ease 0.4s forwards; }
+.lp7-stat-4 { opacity: 0; animation: fadeUp 0.6s ease 0.55s forwards; }
+
+/* ═══════════════════════════════════════════════
+   LANDPAGE 8 — Black & Sage
+═══════════════════════════════════════════════ */
+
+/* ─── NAV LINK sage underline ─── */
+.lp8-nav-link {
+  position: relative;
+}
+.lp8-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #7CAE7A;
+  transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.lp8-nav-link:hover::after {
+  width: 100%;
+}
+
+/* ─── HERO ENTRY ANIMATIONS ─── */
+.lp8-fade-1 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.25s forwards;
+}
+.lp8-fade-2 {
+  opacity: 0;
+  animation: fadeUp 0.9s ease 0.45s forwards;
+}
+.lp8-fade-3 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.65s forwards;
+}
+.lp8-fade-4 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.85s forwards;
+}
+
+/* ─── SAGE DIVIDER EXPAND ─── */
+.lp8-divider {
+  width: 0;
+  opacity: 0;
+  animation: lp8DividerExpand 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.55s forwards;
+}
+@keyframes lp8DividerExpand {
+  to { width: 72px; opacity: 1; }
+}
+
+/* ─── SCROLL LINE ─── */
+.lp8-scroll-line {
+  animation: lp8ScrollGrow 1.2s ease 1.6s both;
+}
+@keyframes lp8ScrollGrow {
+  from { height: 0; opacity: 0; }
+  to   { height: 48px; opacity: 1; }
+}
+
+/* ─── HERO RADIAL GLOW (sage on black) — wide & soft ─── */
+.lp8-hero-glow {
+  background: radial-gradient(
+    ellipse at 50% 44%,
+    rgba(124, 174, 122, 0.08) 0%,
+    rgba(124, 174, 122, 0.03) 50%,
+    transparent 75%
+  );
+}
+
+/* ─── BOTANICAL BRANCH — gentle sway ─── */
+.lp8-branch-sway {
+  animation: lp8BranchSway 18s ease-in-out infinite alternate;
+  transform-origin: bottom center;
+}
+@keyframes lp8BranchSway {
+  from { transform: scaleX(1)   skewX(0deg); }
+  to   { transform: scaleX(1.01) skewX(0.4deg); }
+}
+
+/* ─── LEAF EMBLEM — slow breathe ─── */
+.lp8-leaf-breathe {
+  animation: lp8LeafBreathe 7s ease-in-out infinite;
+}
+@keyframes lp8LeafBreathe {
+  0%, 100% { opacity: 0.85; transform: scale(1); }
+  50%       { opacity: 1;    transform: scale(1.07); }
+}
+
+/* ─── PHILOSOPHY RINGS — slow breathe ─── */
+.lp8-rings-breathe {
+  animation: lp8RingsBreathe 12s ease-in-out infinite;
+}
+@keyframes lp8RingsBreathe {
+  0%, 100% { opacity: 0.8; transform: scale(1); }
+  50%       { opacity: 1;   transform: scale(1.04); }
+}
+
+/* ─── PHILOSOPHY SAGE BORDER LINES ─── */
+.lp8-philosophy-lines::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(124, 174, 122, 0.35), transparent);
+}
+.lp8-philosophy-lines::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(124, 174, 122, 0.35), transparent);
+}
+
+/* ─── SCROLL REVEAL ─── */
+.lp8-reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.lp8-reveal.lp8-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── STAT ANIMATIONS ─── */
+.lp8-stat-1 { opacity: 0; animation: fadeUp 0.6s ease 0.1s forwards; }
+.lp8-stat-2 { opacity: 0; animation: fadeUp 0.6s ease 0.25s forwards; }
+.lp8-stat-3 { opacity: 0; animation: fadeUp 0.6s ease 0.4s forwards; }
+.lp8-stat-4 { opacity: 0; animation: fadeUp 0.6s ease 0.55s forwards; }
+
