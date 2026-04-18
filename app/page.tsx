@@ -73,6 +73,12 @@ export default function Home() {
             </li>
           ))}
           <li className="flex gap-8 border-l border-ash pl-11">
+            <a href="/template1" className="nav-link text-[0.72rem] font-normal tracking-[0.18em] uppercase text-muted hover:text-silver transition-colors duration-300">
+              T1
+            </a>
+            <a href="/template2" className="nav-link text-[0.72rem] font-normal tracking-[0.18em] uppercase text-muted hover:text-silver transition-colors duration-300">
+              T2
+            </a>
             <a href="/landpage2" className="nav-link text-[0.72rem] font-normal tracking-[0.18em] uppercase text-muted hover:text-silver transition-colors duration-300">
               LP2
             </a>

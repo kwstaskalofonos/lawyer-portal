@@ -106,6 +106,8 @@ export default function LandPage5() {
               { label: "LP6", href: "/landpage6" },
               { label: "LP7", href: "/landpage7" },
               { label: "LP8", href: "/landpage8" },
+              { label: "T1", href: "/template1" },
+              { label: "T2", href: "/template2" },
             ].map(({ label, href }) => (
               <a
                 key={label}

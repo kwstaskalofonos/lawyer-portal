@@ -949,3 +949,35 @@ body {
 .lp8-stat-3 { opacity: 0; animation: fadeUp 0.6s ease 0.4s forwards; }
 .lp8-stat-4 { opacity: 0; animation: fadeUp 0.6s ease 0.55s forwards; }
 
+/* ═══════════════════════════════════════════════
+   TEMPLATE 2 — Contained Light Layout
+═══════════════════════════════════════════════ */
+.t2-fade-1 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.2s forwards;
+}
+.t2-fade-2 {
+  opacity: 0;
+  animation: fadeUp 0.8s ease 0.4s forwards;
+}
+
+/* ═══════════════════════════════════════════════
+   TEMPLATE 1 — Light Grey & Blue-Grey
+═══════════════════════════════════════════════ */
+
+/* NAV underline — pseudo-element can't be done in Tailwind */
+.t1-nav-link { position: relative; }
+.t1-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -4px; left: 0;
+  width: 0; height: 1px;
+  background: #5C6F7C;
+  transition: width 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.t1-nav-link:hover::after { width: 100%; }
+
+/* Hero entry animations */
+.t1-fade-1 { opacity: 0; animation: fadeUp 0.8s ease 0.2s forwards; }
+.t1-fade-2 { opacity: 0; animation: fadeUp 0.8s ease 0.4s forwards; }
+

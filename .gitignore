@@ -43,3 +43,8 @@ next-env.d.ts
 index.html
 CLAUDE.md
 AGENTS.md
+*.txt
+template1.png
+template2.png
+template2.html
+template1.html

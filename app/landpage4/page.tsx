@@ -119,6 +119,12 @@ export default function LandPage4() {
             <a href="/landpage8" className="lp4-nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4A5E72] hover:text-[#8A9BB0] transition-colors duration-300">
               LP8
             </a>
+            <a href="/template1" className="lp4-nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4A5E72] hover:text-[#8A9BB0] transition-colors duration-300">
+              T1
+            </a>
+            <a href="/template2" className="lp4-nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4A5E72] hover:text-[#8A9BB0] transition-colors duration-300">
+              T2
+            </a>
           </li>
         </ul>
       </nav>

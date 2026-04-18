@@ -100,6 +100,8 @@ export default function LandPage8() {
           <li className="border-l border-[#1F1F1F] pl-10 flex gap-8">
             {[
               { label: "LP1", href: "/" },
+              { label: "T1", href: "/template1" },
+              { label: "T2", href: "/template2" },
               { label: "LP2", href: "/landpage2" },
               { label: "LP3", href: "/landpage3" },
               { label: "LP4", href: "/landpage4" },
