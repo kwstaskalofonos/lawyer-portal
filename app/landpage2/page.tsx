@@ -104,23 +104,8 @@ export default function LandPage2() {
             <a href="/" className="nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4a4a4a] hover:text-[#707070] transition-colors duration-300">
               LP1
             </a>
-            <a href="/landpage3" className="nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4a4a4a] hover:text-[#707070] transition-colors duration-300">
-              LP3
-            </a>
             <a href="/landpage4" className="nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4a4a4a] hover:text-[#707070] transition-colors duration-300">
               LP4
-            </a>
-            <a href="/landpage5" className="nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4a4a4a] hover:text-[#707070] transition-colors duration-300">
-              LP5
-            </a>
-            <a href="/landpage6" className="nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4a4a4a] hover:text-[#707070] transition-colors duration-300">
-              LP6
-            </a>
-            <a href="/landpage7" className="nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4a4a4a] hover:text-[#707070] transition-colors duration-300">
-              LP7
-            </a>
-            <a href="/landpage8" className="nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4a4a4a] hover:text-[#707070] transition-colors duration-300">
-              LP8
             </a>
             <a href="/template1" className="nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4a4a4a] hover:text-[#707070] transition-colors duration-300">
               T1

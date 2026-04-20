@@ -126,12 +126,7 @@ const TESTIMONIALS = [
 const OTHER_PAGES = [
   { label: "LP1", href: "/" },
   { label: "LP2", href: "/landpage2" },
-  { label: "LP3", href: "/landpage3" },
   { label: "LP4", href: "/landpage4" },
-  { label: "LP5", href: "/landpage5" },
-  { label: "LP6", href: "/landpage6" },
-  { label: "LP7", href: "/landpage7" },
-  { label: "LP8", href: "/landpage8" },
   { label: "T2", href: "/template2" },
 ];
 

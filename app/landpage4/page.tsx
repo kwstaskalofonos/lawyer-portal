@@ -104,21 +104,6 @@ export default function LandPage4() {
             <a href="/landpage2" className="lp4-nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4A5E72] hover:text-[#8A9BB0] transition-colors duration-300">
               LP2
             </a>
-            <a href="/landpage3" className="lp4-nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4A5E72] hover:text-[#8A9BB0] transition-colors duration-300">
-              LP3
-            </a>
-            <a href="/landpage5" className="lp4-nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4A5E72] hover:text-[#8A9BB0] transition-colors duration-300">
-              LP5
-            </a>
-            <a href="/landpage6" className="lp4-nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4A5E72] hover:text-[#8A9BB0] transition-colors duration-300">
-              LP6
-            </a>
-            <a href="/landpage7" className="lp4-nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4A5E72] hover:text-[#8A9BB0] transition-colors duration-300">
-              LP7
-            </a>
-            <a href="/landpage8" className="lp4-nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4A5E72] hover:text-[#8A9BB0] transition-colors duration-300">
-              LP8
-            </a>
             <a href="/template1" className="lp4-nav-link text-[0.7rem] tracking-[0.18em] uppercase text-[#4A5E72] hover:text-[#8A9BB0] transition-colors duration-300">
               T1
             </a>
