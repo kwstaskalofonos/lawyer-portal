@@ -1,6 +1,26 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
+
+const LAWYERS = [
+  {
+    name: "Ελένη Αναστασίου",
+    role: "Συνέταιρος · Εταιρικό & Εμπορικό Δίκαιο",
+    bio: "Δεκαπέντε χρόνια εμπειρίας στη συμβουλευτική πολυεθνικών εταιριών σε M&A, αναδιάρθρωση και διασυνοριακές συναλλαγές. Η αναλυτική ακρίβεια και η σταθερή γνωμοδότηση της Ελένης την έχουν καταστήσει αναντικατάστατη σύμβουλο σε ελληνικές και ευρωπαϊκές επιχειρήσεις.",
+    imageUrl: "/woman.jpg",
+    monogram: "Ε.Α.",
+    tag: "Εταιρικό Δίκαιο",
+  },
+  {
+    name: "Νίκος Δημητρίου",
+    role: "Συνέταιρος · Αστικό & Δικαστηριακό Δίκαιο",
+    bio: "Πρώην δικαστικός γραμματέας του Αρείου Πάγου με είκοσι χρόνια σε αστικές διαφορές. Ο Νίκος είναι γνωστός για την αποφασιστικότητα στο δικαστήριο, τη στρατηγική προετοιμασία και τη διαρκή επιδίωξη της καλύτερης έκβασης για κάθε εντολέα.",
+    imageUrl: "/man.jpg",
+    monogram: "Ν.Δ.",
+    tag: "Αστικές Διαφορές",
+  },
+];
 
 const practiceAreas = [
   "Αστικές Διαφορές",
@@ -62,7 +82,7 @@ export default function Home() {
           Μπακόπουλος<span className="text-gold">.</span>
         </a>
         <ul className="hidden md:flex gap-11 list-none m-0 p-0">
-          {["About", "Practice", "Philosophy", "Contact"].map((item) => (
+          {["Team", "About", "Practice", "Philosophy", "Contact"].map((item) => (
             <li key={item}>
               <a
                 href={`#${item.toLowerCase()}`}
@@ -300,6 +320,78 @@ export default function Home() {
           </div>
         ))}
       </div>
+
+      {/* ─── TEAM ─── */}
+      <section id="team" className="border-t border-ash">
+        <div className="px-7 md:px-14 py-16 md:py-20 border-b border-ash">
+          <p className="reveal text-[0.62rem] tracking-[0.35em] uppercase text-gold mb-3">
+            Our Partners
+          </p>
+          <h2
+            className="reveal font-serif font-light text-warm-white leading-[1.15]"
+            style={{ fontSize: "clamp(2rem, 3vw, 2.8rem)" }}
+          >
+            Distinguished expertise,
+            <br />
+            <em className="italic text-silver">built over decades.</em>
+          </h2>
+        </div>
+
+        <div className="grid md:grid-cols-2">
+          {LAWYERS.map((lawyer, i) => (
+            <div
+              key={lawyer.name}
+              className={`lp2-lawyer-card group relative overflow-hidden ${
+                i === 0 ? "md:border-r border-ash" : ""
+              }`}
+            >
+              {/* Portrait image */}
+              <div className="relative h-[58vh] md:h-[65vh] overflow-hidden">
+                <Image
+                  src={lawyer.imageUrl}
+                  alt={lawyer.name}
+                  fill
+                  className="object-cover object-top grayscale brightness-[0.55] transition-all duration-700 group-hover:brightness-[0.45] group-hover:scale-[1.04]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/20 to-transparent" />
+
+                {/* Monogram */}
+                <span className="absolute top-8 left-8 font-serif text-[1.8rem] font-light text-ash group-hover:text-silver transition-colors duration-500 select-none">
+                  {lawyer.monogram}
+                </span>
+
+                {/* Tag badge */}
+                <span className="absolute top-8 right-8 text-[0.58rem] tracking-[0.25em] uppercase text-muted border border-ash px-3 py-1 group-hover:border-gold group-hover:text-gold transition-all duration-500">
+                  {lawyer.tag}
+                </span>
+
+                {/* Name overlay */}
+                <div className="absolute bottom-0 left-0 right-0 px-8 pb-8">
+                  <p className="text-[0.62rem] tracking-[0.28em] uppercase text-muted mb-2">
+                    {lawyer.role}
+                  </p>
+                  <h3 className="font-serif text-[2rem] font-light text-off-white leading-[1.1]">
+                    {lawyer.name}
+                  </h3>
+                </div>
+              </div>
+
+              {/* Bio block */}
+              <div className="reveal px-8 md:px-12 py-10 border-t border-ash">
+                <p className="text-[0.86rem] text-silver leading-[1.9] group-hover:text-dim-white transition-colors duration-500">
+                  {lawyer.bio}
+                </p>
+                <div className="mt-8 flex items-center gap-4">
+                  <div className="h-px w-6 bg-ash group-hover:w-10 group-hover:bg-gold transition-all duration-500" />
+                  <span className="text-[0.62rem] tracking-[0.25em] uppercase text-muted group-hover:text-gold transition-colors duration-500">
+                    Request Consultation
+                  </span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
 
       {/* ─── ABOUT & PRACTICE ─── */}
       <section className="grid md:grid-cols-2 min-h-[80vh]" id="about">
